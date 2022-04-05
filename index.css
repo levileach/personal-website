@@ -45,13 +45,22 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+.desktop-set {
+    visibility: hidden;
+}
+
+.mobile-set {
+    visibility: visible;
+}
 
 /* the flex container for columns within a section */
 .column-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0;
+    /*margin: 0;*/
+    margin: auto;
+    /*background-color: orange;*/
 }
 
 /* a column within a section */
@@ -59,7 +68,7 @@ html, body {
     margin-bottom: 2rem;
     text-align: justify;
     position: relative;
-    flex-basis: 46%;
+    /*flex-basis: 48%;*/
 }
 
 /* when the site is larger than the minimum pixels */
@@ -78,6 +87,14 @@ html, body {
 
     #site-subtitle {
         width: 30%;
+    }
+
+    .desktop-set {
+        visibility: visible;
+    }
+
+    .mobile-set {
+        visibility: hidden;
     }
 }
 
