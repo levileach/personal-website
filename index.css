@@ -45,10 +45,12 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+/* the desktop set of images */
 .desktop-set {
     display: none !important;
 }
 
+/* the mobile set of images */
 .mobile-set {
     display: flex;
 }
@@ -58,43 +60,64 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0;
+    margin: auto;
     padding: 0 1%;
 }
 
 /* a column within a section */
 .column {
-    margin-bottom: 0;
-    /*margin-bottom: 1rem;*/
-    text-align: justify;
+    margin: 0 auto 0 auto;
+    /*margin-bottom: 0;*/
+    text-align: center;
     position: relative;
-    flex-basis: auto;
+    flex-basis: 95%;
 }
 
 /* when the site is larger than the minimum pixels */
 @media (min-width: 800px) {
+
+    /* the container for columns (nav) */
     .column-container {
         flex-wrap: nowrap;
         width: 85%;
         margin: auto;
     }
 
+    /* the columns (in nav) */
     .column {
         margin-bottom: 0;
         padding: 1rem;
         text-align: center;
     }
 
+    /* the site's subtitle */
     #site-subtitle {
         width: 30%;
     }
 
+    /* the desktop set of images */
     .desktop-set {
         display: flex !important;
     }
 
+    /* the mobile set of images*/
     .mobile-set {
         display: none !important;
+    }
+
+    /* what happens to the image when the nav button is hovered*/
+    .column:hover img {
+        box-shadow: 5px 5px 10px black;
+        transform: scale(1.05, 1.05) skew(-2deg);
+        z-index: 0;
+        transition: all 100ms ease-in-out;
+    }
+
+    /* what happens to the text when the nav option is hovered */
+    .column:hover .nav-title {
+        transform: translate(-50%, -50%) scale(1.2, 1.2) skew(-2deg);
+        z-index: 1;
+        transition: all 100ms ease-in-out;
     }
 }
 
@@ -103,22 +126,11 @@ img {
     max-width: 100%;
     border-radius: 3px;
     image-rendering: smooth;
+    margin: auto;
+    text-align: center;
 }
 
-/* what happens to the image when the nav button is hovered*/
-.column:hover img {
-    box-shadow: 5px 5px 10px black;
-    transform: scale(1.05, 1.05) skew(-2deg);
-    z-index: 0;
-    transition: all 100ms ease-in-out;
-}
 
-/* what happens to the text when the nav option is hovered */
-.column:hover .nav-title {
-    transform: translate(-50%, -50%) scale(1.2, 1.2) skew(-2deg);
-    z-index: 1;
-    transition: all 100ms ease-in-out;
-}
 
 /* the text for an option in the navigation */
 .nav-title {
@@ -134,14 +146,14 @@ img {
 
 /* the top section of the site */
 #top-section {
+    padding: 1% 5%;
     height: 100vh;
 }
 
 /* a section of the site */
 .site-section {
     width: 100%;
-    padding: 1%;
-    left: 0;
+    padding: 1% 0;
     text-align: center;
     min-height: 100vh;
 }
