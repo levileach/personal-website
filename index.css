@@ -63,7 +63,7 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto;
+    margin: 5% auto 0 auto;
     padding: 0 1%;
 }
 
@@ -219,11 +219,6 @@ a {
 }
 
 
-/* the images for the nav arrows */
-.arrow-image {
-
-}
-
 /* the white arrows */
 .white-arrow {
     filter: invert(100);
@@ -233,6 +228,7 @@ a {
     width: 2rem;
 }
 
+/* the black arrows */
 .black-arrow {
     display: inline-block;
     margin: 0;
@@ -240,18 +236,15 @@ a {
     width: 2rem;
 }
 
+/* when a white arrow is hovered */
 .white-arrow:hover {
     filter: invert(100) opacity(0.6);
 }
 
+/* when a black arrow is hovered */
 .black-arrow:hover {
     filter: opacity(0.6);
 }
-
-/*!* when an arrow is hovered *!*/
-/*.arrow-image:hover {*/
-/*    filter: opacity(0.7);*/
-/*}*/
 
 
 /* the invisible link (anchor) for a section */
