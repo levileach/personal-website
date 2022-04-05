@@ -46,11 +46,11 @@ html, body {
 }
 
 .desktop-set {
-    visibility: hidden;
+    display: none !important;
 }
 
 .mobile-set {
-    visibility: visible;
+    display: flex;
 }
 
 /* the flex container for columns within a section */
@@ -58,17 +58,17 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /*margin: 0;*/
-    margin: auto;
-    /*background-color: orange;*/
+    margin: 0;
+    padding: 0 1%;
 }
 
 /* a column within a section */
 .column {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    /*margin-bottom: 1rem;*/
     text-align: justify;
     position: relative;
-    /*flex-basis: 48%;*/
+    flex-basis: auto;
 }
 
 /* when the site is larger than the minimum pixels */
@@ -90,11 +90,11 @@ html, body {
     }
 
     .desktop-set {
-        visibility: visible;
+        display: flex !important;
     }
 
     .mobile-set {
-        visibility: hidden;
+        display: none !important;
     }
 }
 
