@@ -207,7 +207,7 @@ a {
     border-radius: 3px;
     display: inline-block;
     padding: 2%;
-    margin: 2% 0;
+    margin: 2% auto;
 }
 
 /* the invisible link (anchor) for a section */
@@ -228,11 +228,6 @@ a {
     100% {
         opacity: 1;
     }
-}
-
-/* a button to click */
-.click-button {
-    background-color: var(--site-blue);
 }
 
 
