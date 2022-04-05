@@ -17,7 +17,7 @@ html, body {
 /* the title of the site */
 #site-title {
     color: var(--site-blue);
-    padding: 2.5% 2.5%;
+    padding: 1% 2.5%;
     font-weight: var(--semibold);
 }
 
