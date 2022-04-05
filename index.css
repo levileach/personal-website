@@ -207,7 +207,7 @@ a {
     border-radius: 3px;
     display: inline-block;
     padding: 2%;
-    margin: 2%;
+    margin: 2% 0;
 }
 
 /* the invisible link (anchor) for a section */
@@ -218,12 +218,6 @@ a {
     visibility: hidden;
 }
 
-.document-frame {
-    max-width: 80%;
-    height: 400px;
-    display: block;
-    margin: 2% auto;
-}
 
 /* define the animation for fading something in */
 @keyframes fadeInAnimation {
@@ -236,12 +230,7 @@ a {
     }
 }
 
-
-#files {
-    background-color: var(--site-blue);
-    color: white;
-}
-
+/* a button to click */
 .click-button {
     background-color: var(--site-blue);
 }
