@@ -54,7 +54,6 @@ html {
 
 /* a column within a section */
 .column {
-    flex-basis: auto;
     margin-bottom: 2rem;
     text-align: justify;
     position: relative;
