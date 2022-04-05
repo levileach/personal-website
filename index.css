@@ -9,6 +9,7 @@
 /* the HTML document */
 html {
     font-family: "Gill Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* the title of the site */
@@ -18,20 +19,28 @@ html {
     font-weight: var(--semibold);
 }
 
+/* the big hello text for the site */
 #site-hello {
     color: var(--site-blue);
     text-align: center;
     font-size: 500%;
     margin: 0;
     padding: 0;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
+/* the subtitle for the site */
 #site-subtitle {
     font-weight: normal;
     text-align: center;
     width: 90%;
     margin: 0 auto 5% auto;
     font-family: Monospaced, monospace;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 
@@ -52,6 +61,7 @@ html {
     flex-basis: 46%;
 }
 
+/* when the site is larger than the minimum pixels */
 @media (min-width: 800px) {
     .column-container {
         flex-wrap: nowrap;
@@ -70,12 +80,14 @@ html {
     }
 }
 
+/* images */
 img {
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
     image-rendering: smooth;
 }
 
+/* what happens to the image when the nav button is hovered*/
 .column:hover img {
     box-shadow: 5px 5px 10px black;
     transform: scale(1.05, 1.05) skew(-2deg);
@@ -83,13 +95,14 @@ img {
     transition: all 100ms ease-in-out;
 }
 
+/* what happens to the text when the nav option is hovered */
 .column:hover .nav-title {
     transform: translate(-50%, -50%) scale(1.2, 1.2) skew(-2deg);
     z-index: 1;
     transition: all 100ms ease-in-out;
 }
 
-
+/* the text for an option in the navigation */
 .nav-title {
     position: absolute;
     left: 50%;
@@ -101,9 +114,65 @@ img {
     padding: 0;
 }
 
+/* the top section of the site */
+#top-section {
+    height: 100vh;
+}
+
+/* a section of the site */
+.site-section {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* the header text for a section */
 .section-header {
     color: var(--site-blue);
     font-weight: var(--semibold);
     text-align: center;
-    font-size: 500%;
+    font-size: 350%;
+}
+
+/* links on the site */
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* a button to download a file */
+.file-button {
+    font-weight: normal;
+    background-color: var(--site-blue);
+    color: white;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0 1%;
+}
+
+/* the download file button when hovered */
+.file-button:hover {
+    transform: scale(1.05, 1.05) skew(-3deg);
+    transition: all 100ms ease-in-out;
+    box-shadow: 3px 3px 5px var(--site-blue);
+}
+
+/* the invisible link (anchor) for a section */
+.link-to {
+    display: block;
+    position: relative;
+    top: 0;
+    visibility: hidden;
+}
+
+/* define the animation for fading something in */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+    }
 }
