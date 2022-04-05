@@ -242,7 +242,6 @@ a {
     blinkTextCursor 0.5s steps(10) 7 normal;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid transparent;
 }
 
 /* the typewriter animation */
