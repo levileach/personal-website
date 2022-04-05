@@ -153,6 +153,7 @@ img {
     font-weight: var(--semibold);
     margin: 0;
     padding: 0;
+    width: 80%;
 }
 
 /* the top section of the site */
