@@ -210,6 +210,42 @@ a {
     margin: 2% auto;
 }
 
+/* the container for nav arrows */
+.arrow-container {
+    display: inline-block;
+    position: absolute;
+    right: 2.5%;
+}
+
+/* nav arrows */
+.nav-arrow {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0 1%;
+}
+
+/* white translucent text */
+.white-transparent {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* blue translucent text */
+.blue-transparent {
+    color: rgba(0, 49, 106, 0.5);
+}
+
+/* white transparent on hover */
+.white-transparent:hover {
+    color: white;
+}
+
+/* blue transparent on hover */
+.blue-transparent:hover {
+    color: var(--site-blue);
+}
+
 /* the invisible link (anchor) for a section */
 .link-to {
     display: block;

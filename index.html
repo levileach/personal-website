@@ -20,41 +20,52 @@
 
     <!-- the container for the nav items to display on desktop-->
     <div class="column-container desktop-set">
-        <div class="column"><a class="section-link" href="#about-section"><h1 class="nav-title">About</h1><img src="Images/Desktop/About.png" alt="None"></a></div>
-        <div class="column"><a class="section-link" href="#work-section"><h1 class="nav-title">Work</h1><img src="Images/Desktop/Work.png" alt="None"></a></div>
-        <div class="column"><a class="section-link" href="#files-section"><h1 class="nav-title">Files and Links</h1><img src="Images/Desktop/Files.png" alt="None"></a></div>
-        <div class="column"><a class="section-link" href="#contact-section"><h1 class="nav-title">Contact</h1><img src="Images/Desktop/Contact.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#about"><h1 class="nav-title">About</h1><img src="Images/Desktop/About.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#work"><h1 class="nav-title">Work</h1><img src="Images/Desktop/Work.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#links"><h1 class="nav-title">Links</h1><img src="Images/Desktop/Files.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#contact"><h1 class="nav-title">Contact</h1><img src="Images/Desktop/Contact.png" alt="None"></a></div>
     </div>
 
     <!-- the container for the nav items to display on mobile -->
     <div class="column-container mobile-set">
-        <div class="column"><a class="section-link" href="#about-section"><h1 class="nav-title">About</h1><img src="Images/Mobile/About.png" alt="None"></a></div>
-        <div class="column"><a class="section-link" href="#work-section"><h1 class="nav-title">Work</h1><img src="Images/Mobile/Work.png" alt="None"></a></div>
-        <div class="column"><a class="section-link" href="#files-section"><h1 class="nav-title">Files</h1><img src="Images/Mobile/Files.png" alt="None"></a></div>
-        <div class="column"><a class="section-link" href="#contact-section"><h1 class="nav-title">Contact</h1><img src="Images/Mobile/Contact.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#about"><h1 class="nav-title">About</h1><img src="Images/Mobile/About.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#work"><h1 class="nav-title">Work</h1><img src="Images/Mobile/Work.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#links"><h1 class="nav-title">Links</h1><img src="Images/Mobile/Files.png" alt="None"></a></div>
+        <div class="column"><a class="section-link" href="#contact"><h1 class="nav-title">Contact</h1><img src="Images/Mobile/Contact.png" alt="None"></a></div>
     </div>
 
 </div>
 
 
 <!-- the about section -->
-<a id="about-section" class="link-to"></a>
+<a id="about" class="link-to"></a>
 <div class="site-section blue-back">
+    <div class="arrow-container">
+        <a href="#work"><h1 class="nav-arrow white-transparent">↓</h1></a>
+    </div>
     <h1 class="section-header white-text">About</h1>
 </div>
 
 
 <!-- the work section -->
-<a id="work-section" class="link-to"></a>
+<a id="work" class="link-to"></a>
 <div class="site-section white-back">
+    <div class="arrow-container">
+        <a href="#about"><h1 class="nav-arrow blue-transparent">↑</h1></a>
+        <a href="#links"><h1 class="nav-arrow blue-transparent">↓</h1></a>
+    </div>
     <h1 class="section-header blue-text">Work</h1>
 </div>
 
 
 <!-- the files section -->
-<a id="files-section" class="link-to"></a>
+<a id="links" class="link-to"></a>
 <div class="site-section blue-back">
-    <h1 class="section-header white-text">Files and Links</h1>
+    <div class="arrow-container">
+        <a href="#work"><h1 class="nav-arrow white-transparent">↑</h1></a>
+        <a href="#contact"><h1 class="nav-arrow white-transparent">↓</h1></a>
+    </div>
+    <h1 class="section-header white-text">Links</h1>
 
 <!--     the link options to display on desktop-->
     <div class="column-container desktop-set">
@@ -72,9 +83,13 @@
 
 </div>
 
+
 <!-- the contact section -->
-<a id="contact-section" class="link-to"></a>
+<a id="contact" class="link-to"></a>
 <div class="site-section white-back">
+    <div class="arrow-container">
+        <a href="#links"><h1 class="nav-arrow blue-transparent">↑</h1></a>
+    </div>
     <h1 class="section-header blue-text">Contact</h1>
     <h3 class="big-subheading mono-font">Please reach out to me at<br><a href = "mailto: leach.le@northeastern.cedu"><span class="file-button blue-back white-text">leach.le@northeastern.edu</span></a></h3>
 </div>
