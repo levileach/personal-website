@@ -226,6 +226,13 @@ a {
     padding: 0 1%;
 }
 
+.arrow-image {
+    display: inline-block;
+    margin: 0;
+    padding: 0 10%;
+    width: 2rem;
+}
+
 /* white translucent text */
 .white-transparent {
     color: rgba(255, 255, 255, 0.5);
