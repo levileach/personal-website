@@ -3,6 +3,7 @@
 :root {
     --site-blue: rgb(0, 49, 106);
     --site-flont: "Gill Sans", sans-serif;
+    --mono-font: Monospaced, monospace;
     --semibold: 600;
 }
 
@@ -19,35 +20,32 @@ html, body {
     color: var(--site-blue);
     padding: 1% 2.5%;
     font-weight: var(--semibold);
+    font-family: var(--site-flont);
 }
 
 /* the big hello text for the site */
 #site-hello {
     color: var(--site-blue);
     text-align: center;
-    font-size: 500%;
-    margin: 0;
+    font-size: 5rem;
+    margin: 0 auto;
     padding: 0;
-    animation: fadeInAnimation ease 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    font-family: var(--mono-font);
 }
 
 
 /* the subtitle for the site */
-.monospaced-subheading {
+.big-subheading {
     font-weight: normal;
     text-align: center;
-    width: 90%;
-    margin: 2% auto 5% auto;
-    font-family: Monospaced, monospace;
+    width: 95%;
+    margin: 2% auto;
+    font-size: 1.5rem;
 }
 
-/* the subtitle for the site */
-.site-subtitle {
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+/* make something monospaced font */
+.mono-font {
+    font-family: var(--mono-font);
 }
 
 /* the desktop set of images */
@@ -78,7 +76,7 @@ html, body {
 }
 
 /* when the site is larger than the minimum pixels */
-@media (min-width: 800px) {
+@media (min-width: 700px) {
 
     /* the container for columns (nav) */
     .column-container {
@@ -95,8 +93,8 @@ html, body {
     }
 
     /* the site's subtitle */
-    .site-subtitle {
-        width: 40%;
+    .big-subheading {
+        width: 50%;
     }
 
     /* the desktop set of images */
@@ -246,4 +244,26 @@ a {
 
 .click-button {
     background-color: var(--site-blue);
+}
+
+
+/* play the typewriter animation */
+.typewriter {
+    animation: typewriter 1s steps(6) 0.5s 1 normal both,
+    blinkTextCursor 0.5s steps(10) 7 normal;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+}
+
+/* the typewriter animation */
+@keyframes typewriter {
+    from{width: 0;}
+    to{width: 18rem;}
+}
+
+/* the cursor blinking animation */
+@keyframes blinkTextCursor {
+    from{border-right: 2px solid var(--site-blue)}
+    to{border-right: 2px solid transparent}
 }
