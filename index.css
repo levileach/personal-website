@@ -45,10 +45,11 @@ html {
 
 /* a column within a section */
 .column {
-    flex-basis: 100%;
+    /*flex-basis: auto;*/
     margin-bottom: 2rem;
     text-align: justify;
     position: relative;
+    flex-basis: 49%;
 }
 
 @media (min-width: 800px) {
@@ -98,4 +99,11 @@ img {
     font-weight: var(--semibold);
     margin: 0;
     padding: 0;
+}
+
+.section-header {
+    color: var(--site-blue);
+    font-weight: var(--semibold);
+    text-align: center;
+    font-size: 500%;
 }
