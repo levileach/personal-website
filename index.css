@@ -49,7 +49,7 @@ html {
     margin-bottom: 2rem;
     text-align: justify;
     position: relative;
-    flex-basis: 49%;
+    flex-basis: 46%;
 }
 
 @media (min-width: 800px) {
