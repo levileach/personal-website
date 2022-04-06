@@ -27,7 +27,7 @@
     </div>
 
     <!-- the container for the nav items to display on mobile -->
-    <div class="column-container mobile-set">
+    <div class="column-container mobile-set" id="top-links">
         <div class="column"><a class="section-link" href="#about"><h1 class="nav-title">About</h1><img src="Images/Mobile/About.png" alt="None"></a></div>
         <div class="column"><a class="section-link" href="#work"><h1 class="nav-title">Work</h1><img src="Images/Mobile/Work.png" alt="None"></a></div>
         <div class="column"><a class="section-link" href="#links"><h1 class="nav-title">Links</h1><img src="Images/Mobile/Files.png" alt="None"></a></div>
@@ -63,6 +63,62 @@
         <a href="#links"><img src="Images/ArrowDown.png" class="black-arrow" alt="None"/></a>
     </div>
     <h1 class="section-header blue-text">Work</h1>
+
+<!--     the slideshow container -->
+    <div class="slideshow-container">
+        <!-- images with number and caption text -->
+        <div class="slides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="Images/OBP/01_HOMEPAGE.jpeg" style="width:100%" alt="None">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="Images/OBP/02_HOMEPAGE.jpeg" style="width:100%" alt="None">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="Images/OBP/03_HOMEPAGE.jpeg" style="width:100%" alt="None">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="Images/OBP/04_METRICS.jpeg" style="width:100%" alt="None">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="Images/OBP/05_LOGS.jpeg" style="width:100%" alt="None">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="Images/OBP/06_SONAR.jpeg" style="width:100%" alt="None">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="Images/OBP/07_SONAR.jpeg" style="width:100%" alt="None">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
 </div>
 
 
@@ -104,4 +160,34 @@
 </body>
 
 
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
 </html>
