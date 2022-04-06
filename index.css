@@ -108,7 +108,7 @@ html, body {
     }
 
     /* what happens to the image when the nav button is hovered*/
-    .column:hover img {
+    .column:hover .nav-img {
         box-shadow: 5px 5px 10px black;
         transform: scale(1.05, 1.05) skew(-2deg);
         z-index: 0;
@@ -165,7 +165,6 @@ img {
     padding: 1% 0;
     text-align: center;
     min-height: 100vh;
-    vertical-align: center;
 }
 
 /* the header text for a section */
@@ -209,6 +208,20 @@ a {
     padding: 2%;
     margin: 3% auto;
 }
+
+/* text in the about section */
+.about-text {
+    text-align: justify;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* the image in the about section */
+#about-image:hover {
+
+}
+
 
 /* the container for nav arrows */
 .arrow-container {
