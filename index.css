@@ -64,15 +64,16 @@ html, body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 5% auto 0 auto;
-    padding: 0 1%;
+    width: 100%;
 }
 
 /* a column within a section */
 .column {
-    margin: 0 auto 2.5% auto;
+    margin: 0;
     text-align: center;
     position: relative;
-    flex-basis: 95%;
+    flex-basis: 100%;
+    width: 100%;
 }
 
 /* when the site is larger than the minimum pixels */
@@ -127,6 +128,11 @@ html, body {
         transform: scale(1.05, 1.05) skew(-3deg);
         transition: all 100ms ease-in-out;
         box-shadow: 3px 3px 5px gray;
+    }
+
+    /* text in the about section */
+    .about-text {
+        padding: 0;
     }
 }
 
@@ -215,11 +221,13 @@ a {
     color: white;
     font-size: 1.5rem;
     font-weight: normal;
+    padding: 0 2%;
 }
 
 /* the image in the about section */
-#about-image:hover {
-
+#about-image {
+    padding: 0 2%;
+    width: 96%;
 }
 
 
