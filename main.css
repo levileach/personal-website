@@ -1,0 +1,29 @@
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    background:
+        url('https://www.transparenttextures.com/patterns/beige-paper.png'),
+        radial-gradient(circle at 15% 20%, #E53F25, transparent 80%),
+        radial-gradient(circle at 80% 70%, #660426, transparent 80%),
+        radial-gradient(circle at 50% 50%, #970E51, transparent 60%),
+        radial-gradient(circle at 30% 60%, #E9560A, transparent 70%),
+        radial-gradient(circle at 70% 30%, #571A70, transparent 345%);
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+
+
+h1 {
+    font-size: 5rem;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 5ch; /* Set width to match the length of the word "Hello" */
+    text-align: left;
+}

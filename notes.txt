@@ -1,0 +1,8 @@
+
+
+
+
+Transparent background options:
+beige-paper.png
+black-felt.png
+bright-squares.png
