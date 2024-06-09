@@ -39,7 +39,7 @@ a {
 
 
 .play-animation {
-    font-family: Monospaced, monospace;
+    font-family: Courier, monospace;
     overflow: hidden;
     whitespace: nowrap;
     font-weight: normal;
