@@ -16,7 +16,7 @@ body {
         radial-gradient(circle at 70% 30%, #571A70, transparent 345%);
     **/
 
-    background: url('https://www.transparenttextures.com/patterns/graphy-dark.png');
+    /*background: url('https://www.transparenttextures.com/patterns/graphy-dark.png');*/
     background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,9 @@ body {
 a {
     color: inherit;
     text-decoration: inherit;
+    width: inherit;
 }
+
 
 .play-animation {
     font-family: Monospaced, monospace;
@@ -40,7 +42,7 @@ a {
 
 .site-hello {
     font-size: 4rem;
-    margin: 5vh 5vw;
+    margin: 5dvh 5dvw;
     flex-grow: 1;
 }
 
@@ -58,9 +60,10 @@ a {
     flex-direction: column;
     align-items: flex-start;
     font-size: 2rem;
-    margin: 15vh 5vw;
+    margin: 15dvh 5dvw;
 }
 
 .navigation-item {
     margin: 0.5rem 0;
+    width: 100%;
 }
