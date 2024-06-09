@@ -48,7 +48,7 @@ a {
 
 .site-hello {
     font-size: 4rem;
-    margin: 10dvh 5dvw;
+    margin: 10dvh 10dvw;
     flex-grow: 1;
 }
 
@@ -63,7 +63,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     font-size: 2rem;
-    margin: 15dvh 5dvw;
+    margin: 15dvh 10dvw;
 }
 
 .navigation-item {
