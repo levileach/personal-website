@@ -3,6 +3,7 @@
 
 
 Transparent background options:
+graphy-dark
 beige-paper.png
 black-felt.png
 bright-squares.png

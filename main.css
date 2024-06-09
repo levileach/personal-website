@@ -19,7 +19,7 @@ body {
         radial-gradient(circle at 30% 60%, #E9560A, transparent 70%),
         radial-gradient(circle at 70% 30%, #571A70, transparent 345%);
     **/
-    background: url('https://www.transparenttextures.com/patterns/beige-paper.png');
+    background: url('https://www.transparenttextures.com/patterns/graphy-dark.png');
     background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
@@ -28,6 +28,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
 
 .play-animation {
     font-family: Monospaced, monospace;
@@ -44,7 +48,7 @@ body {
 }
 
 #hello {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 #hello:hover {
@@ -68,5 +72,5 @@ body {
 }
 
 .navigation-item {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
