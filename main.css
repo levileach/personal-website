@@ -3,28 +3,52 @@
 body {
     margin: 0;
     height: 100vh;
+    width: 100vw;
+    /**
     background:
-        /* url('https://www.transparenttextures.com/patterns/beige-paper.png'), */
+        url('https://www.transparenttextures.com/patterns/beige-paper.png'),
         radial-gradient(circle at 15% 20%, #E53F25, transparent 80%),
         radial-gradient(circle at 80% 70%, #660426, transparent 80%),
         radial-gradient(circle at 50% 50%, #970E51, transparent 60%),
         radial-gradient(circle at 30% 60%, #E9560A, transparent 70%),
         radial-gradient(circle at 70% 30%, #571A70, transparent 345%);
+    **/
+    background: url('https://www.transparenttextures.com/patterns/beige-paper.png');
     background-blend-mode: overlay;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
     font-family: Arial, sans-serif;
 }
 
 
-
-h1 {
-    font-size: 5rem;
-    color: #EDE8E1;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 6ch; /* Set width to match the length of the word "Hello" */
-    text-align: left;
+.play-animation {
     font-family: Monospaced, monospace;
+    overflow: hidden;
+    whitespace: nowrap;
+    font-weight: normal;
+    text-align: left;
+}
+
+.site-hello {
+    font-size: 4rem;
+    margin: 5vh 5vw;
+    flex-grow: 1;
+}
+
+#hello {
+    font-size: 4rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2rem;
+    margin: 5vh 5vw;
+}
+
+.navigation-item {
+    margin: 1rem 0;
 }
