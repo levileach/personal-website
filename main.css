@@ -48,7 +48,7 @@ a {
 
 .site-hello {
     font-size: 4rem;
-    margin: 5dvh 5dvw;
+    margin: 10dvh 5dvw;
     flex-grow: 1;
 }
 
