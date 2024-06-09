@@ -3,7 +3,9 @@
 body {
     margin: 0;
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
+    width: -webkit-calc(100vw - 0px);
+    height: -webkit-calc(100vh - 0px);
     /**
     background:
         url('https://www.transparenttextures.com/patterns/beige-paper.png'),
@@ -40,6 +42,14 @@ body {
 #hello {
     font-size: 4rem;
 }
+
+
+
+@keyframes example {
+    from {color: black;}
+    to {color: #E53F25;}
+}
+
 
 .navigation {
     display: flex;
