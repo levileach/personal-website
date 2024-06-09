@@ -18,18 +18,18 @@ body {
         linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)),
         linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
     */
-    background-blend-mode: overlay;
+
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
     font-family: Arial, sans-serif;
-     background:
+    background:
         url('images/graphy-dark.png'),
         linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)),
         linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)),
         linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 5%);
-
+    background-blend-mode: overlay;
 }
 
 a {
