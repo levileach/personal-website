@@ -56,19 +56,12 @@ a {
 }
 
 
-
-@keyframes example {
-    from {color: black;}
-    to {color: #E53F25;}
-}
-
-
 .navigation {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 2rem;
-    margin: 5vh 5vw;
+    margin: 20vh 5vw;
 }
 
 .navigation-item {
