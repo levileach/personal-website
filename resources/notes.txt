@@ -3,7 +3,8 @@
 
 
 Transparent background options:
-graphy-dark
-beige-paper.png
-black-felt.png
-bright-squares.png
+Website: https://www.transparenttextures.com/patterns/[image-name].png
+    - graphy-dark
+    - beige-paper.png
+    - black-felt.png
+    - bright-squares.png
