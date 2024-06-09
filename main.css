@@ -5,30 +5,23 @@ body {
     width: 100dvw;
     height: 100dvh;
     color: #313131;
-
-    /**
     background:
-        url('https://www.transparenttextures.com/patterns/beige-paper.png'),
-        radial-gradient(circle at 15% 20%, #E53F25, transparent 80%),
-        radial-gradient(circle at 80% 70%, #660426, transparent 80%),
-        radial-gradient(circle at 50% 50%, #970E51, transparent 60%),
-        radial-gradient(circle at 30% 60%, #E9560A, transparent 70%),
-        radial-gradient(circle at 70% 30%, #571A70, transparent 345%);
-    **/
-
-    background:
-        /*radial-gradient(circle at 50dvw 50dvh, #FFFFFF, transparent 100%),*/
         url('https://www.transparenttextures.com/patterns/graphy-dark.png'),
-        linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
-
+        linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 40%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 20%),
+        linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10%);
     background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
     font-family: Arial, sans-serif;
-
+    /*
+     background:
+        url('https://www.transparenttextures.com/patterns/graphy-dark.png'),
+        linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    */
 }
 
 a {
