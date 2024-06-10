@@ -59,16 +59,30 @@ function typeLetter(textElement) {
 }
 
 
+// clear out all the text whose animation should play
+function clearText() {
+    const textElements = Array.from(document.getElementsByClassName('play-animation'));
+
+    for (let i = 0; i < textElements.length; i++) {
+        let currElement = textElements[i];
+        let currText = currElement.innerText;
+        let elemSection = currElement.getAttribute("data-section");
+
+        if (elemSection != "all") {
+            currElement.innerHTML = `<span style="color: rgba(0, 0, 0, 0)">${currText}</span>`;
+        }
+    }
+}
 
 
 // toggle which main menu to display
 function toggleNav(clickedVal = "default") {
+    clearText();
     const mainNav = document.getElementById("main-navigation");
     const projNav = document.getElementById("project-navigation");
     const abotNav = document.getElementById("about-navigation");
     const contNav = document.getElementById("contact-navigation");
     var currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
-
 
     // update the display mode
     if (clickedVal === "default") {
