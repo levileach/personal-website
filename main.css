@@ -51,7 +51,8 @@ a {
     flex-direction: column;
     align-items: flex-start;
     font-size: 2rem;
-    margin: 15dvh 10dvw;
+    /* margin: 15dvh 10dvw;*/
+    margin: 0 10dvw 15dvh 10dvw;
 }
 
 .navigation-item {
