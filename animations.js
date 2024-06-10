@@ -58,11 +58,6 @@ function toggleNav(clickedVal = "default") {
     const mainNav = document.getElementById("main-navigation");
     const projNav = document.getElementById("project-navigation");
     const abotNav = document.getElementById("about-navigation");
-    console.log(clickedVal);
-    // get our current display mode
-//    var r = document.querySelector(":root");
-//    var rs = getComputedStyle(r);
-//    var displayMode = rs.getPropertyValue("--site-display");
 
     // update the display mode
     if (clickedVal === "default") {
@@ -82,16 +77,4 @@ function toggleNav(clickedVal = "default") {
     }
 
     typeLetters(renderHello = false);
-
-//    r.style.setProperty("--site-display", "projects");
-//            mainNav.style.setProperty("display", "none");
-//            projNav.style.setProperty("display", "flex");
-//            typeLetters(renderHello = false);
-//
-//
-//        r.style.setProperty("--site-display", "default");
-//        mainNav.style.setProperty("display", "flex");
-//        projNav.style.setProperty("display", "none");
-//        typeLetters(renderHello = false);
-//    }
 }
