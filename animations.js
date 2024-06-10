@@ -23,7 +23,7 @@ function typeLetters(renderHello = true) {
 }
 
 function typeLetter(textElement) {
-    const fullText = textElement.textContent;
+    const fullText = textElement.getAttribute("data-text");
     let index = 0;
     const speed = 100;
     textElement.textContent = '';

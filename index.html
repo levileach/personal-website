@@ -10,24 +10,17 @@
 <body>
 
     <div class="site-hello">
-        <a href="https://levileach.com"><h1 id="hello" class="play-animation">hello!</h1></a>
+        <a href="https://levileach.com"><h1 id="hello" class="play-animation" data-text="hello!">hello!</h1></a>
     </div>
     <div id="main-navigation" class="navigation">
-        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item">resumé</h4></a>
-        <a href="mailto:levi.leachg@gmail.com"><h4 class="play-animation navigation-item">contact</h4></a>
-        <h4 id="projects" class="play-animation navigation-item" onclick="typeLetter(this); toggleProjects();">projects</h4>
-<!--        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item">spotify project</h4></a>-->
-<!--        <div>-->
-<!--            <h4 id="projects" class="play-animation navigation-item" onclick="typeLetter(this);">projects ></h4>-->
-<!--            <div id="project-options">-->
-<!--                <a href="project-spotify/index.html"><h4 class="play-animation navigation-item">spotify project</h4></a>-->
-<!--            </div>-->
-<!--        </div>-->
+        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item" data-text="resumé">resumé</h4></a>
+        <a href="mailto:levi.leachg@gmail.com"><h4 class="play-animation navigation-item" data-text="contact">contact</h4></a>
+        <h4 id="projects" class="play-animation navigation-item" onclick="typeLetter(this); toggleProjects();" data-text="projects">projects</h4>
     </div>
 
     <div id="project-navigation" class="navigation">
-        <h4 class="play-animation navigation-item bold" onclick="toggleProjects()">< projects</h4>
-        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item">spotify vis</h4></a>
+        <h4 class="play-animation navigation-item bold" onclick="toggleProjects()" data-text="< projects">< projects</h4>
+        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item" data-text="spotify vis">spotify vis</h4></a>
     </div>
 
 <script src="animations.js"></script>
