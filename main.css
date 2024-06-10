@@ -34,7 +34,7 @@ a {
 
 .site-hello {
     font-size: 4rem;
-    margin: 10dvh 10dvw;
+    margin: 10dvh 10dvw 2dvh 10dvw;
     flex-grow: 1;
 }
 
