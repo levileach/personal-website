@@ -24,6 +24,7 @@ function typeLetters(renderHello = true) {
 }
 
 
+// type out the letters of the given text element
 function typeLetter(textElement) {
     const text = textElement.innerText;
     const typeSpeed = textElement.getAttribute("data-speed");
@@ -36,11 +37,15 @@ function typeLetter(textElement) {
     else if (typeSpeed == "faster") {
         speed = speed / 8
     }
-    textElement.innerHTML = text.split('').map(letter => `<span style="color: rgba(0, 0, 0, 0)">${letter}</span>`).join('');
 
+    // change the color by making letters transparent if they aren't typed yet
     function changeColor() {
-        if (currentIndex < text.length) {
-            textElement.children[currentIndex].style.color = 'black';
+        if (currentIndex <= text.length) {
+            let lText = text.substring(0, currentIndex);
+            let rText = text.substring(currentIndex, text.length);
+            let rHTML = `<span style="color: rgba(0, 0, 0, 0)">${rText}</span>`
+            let fHTML = lText + rHTML
+            textElement.innerHTML = fHTML;
             currentIndex++;
             setTimeout(changeColor, speed);
         }
