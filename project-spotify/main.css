@@ -62,8 +62,8 @@ a.anchor {
 
 .site-title {
     font-weight: normal;
-    margin: 0;
-    padding: 3% 0 0 0;
+    margin: 3% 0 0 0;
+    /* padding: 3% 0 0 0; */
     color: var(--background-color);
 }
 
