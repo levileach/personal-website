@@ -40,7 +40,6 @@ a {
 
 
 #hello {
-
     font-size: 3rem;
     font-weight: semibold;
 }
@@ -62,6 +61,7 @@ a {
 
 .about-text {
     font-size: 1rem;
+    font-weight: normal;
 }
 
 #project-navigation {
@@ -69,6 +69,6 @@ a {
 }
 
 .bold {
-    font-weight: bolder;
+    font-weight: bold;
 }
 

@@ -27,7 +27,7 @@ function typeLetter(textElement) {
     const fullText = textElement.getAttribute("data-text");
     const typeFast = textElement.getAttribute("data-speed");
 
-    let index = -2;
+    let index = 0;
     let speed = 100;
 
     if (typeFast === null) {
