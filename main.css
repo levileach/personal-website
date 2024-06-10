@@ -74,7 +74,7 @@ a {
 
 .navigation-item {
     margin: 0.5rem 0;
-    width: 100%;
+    overflow: overflow;
 }
 
 
@@ -85,3 +85,4 @@ a {
 .bold {
     font-weight: bolder;
 }
+

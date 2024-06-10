@@ -43,7 +43,6 @@ function toggleProjects() {
     const mainNav = document.getElementById("main-navigation");
     const projNav = document.getElementById("project-navigation");
 
-
     // get our current display mode
     var r = document.querySelector(":root");
     var rs = getComputedStyle(r);
