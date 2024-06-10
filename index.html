@@ -12,23 +12,23 @@
 
 <!-- the welcome text on the site -->
     <div class="site-hello">
-        <a href="https://levileach.com"><h1 id="hello" class="play-animation">hello!</h1></a>
+        <a href="https://levileach.com"><h1 id="hello" class="play-animation" data-section="all">hello!</h1></a>
     </div>
 
 
 <!-- the main navigation menu -->
     <div id="main-navigation" class="navigation">
-        <h4 id="about" class="play-animation navigation-item" onclick="toggleNav('about')">about</h4>
-        <h4 id="projects" class="play-animation navigation-item" onclick="toggleNav('projects');">projects</h4>
-        <h4 id="contact" class="play-animation navigation-item" onclick="toggleNav('contact');">contact</h4>
-        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item">resumé</h4></a>
+        <h4 id="about" class="play-animation navigation-item" onclick="toggleNav('about')" data-section="default">about</h4>
+        <h4 id="projects" class="play-animation navigation-item" onclick="toggleNav('projects');" data-section="default">projects</h4>
+        <h4 id="contact" class="play-animation navigation-item" onclick="toggleNav('contact');" data-section="default">contact</h4>
+        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item" data-section="default">resumé</h4></a>
     </div>
 
 
 <!-- the about navigation menu -->
     <div id="about-navigation" class="navigation">
-        <h4 class="play-animation navigation-item bold" onclick="toggleNav()">< about</h4>
-        <h4 class="navigation-item about-text play-animation" data-speed="faster">
+        <h4 class="play-animation navigation-item bold" onclick="toggleNav()" data-section="about">< about</h4>
+        <h4 class="navigation-item about-text play-animation" data-speed="faster" data-section="about">
             b.s. in computer science and economics from northeastern university;
             located in new york city;
             interested in data (analytics, pipelines, visualizations),
@@ -39,16 +39,16 @@
 
 <!-- the project navigation menu-->
     <div id="project-navigation" class="navigation">
-        <h4 class="play-animation navigation-item bold" onclick="toggleNav()">< projects</h4>
-        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item">spotify visualizations</h4></a>
+        <h4 class="play-animation navigation-item bold" onclick="toggleNav()" data-section="projects">< projects</h4>
+        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item" data-section="projects">spotify visualizations</h4></a>
     </div>
 
 
 <!-- the contact navigation menu -->
     <div id="contact-navigation" class="navigation">
-        <h4 class="play-animation navigation-item bold" onclick="toggleNav()">< contact</h4>
-        <a href="mailto:leach.le@northeastern.edu"><h4 class="play-animation navigation-item">email</h4></a>
-        <a href="https://linkedin.com/in/levileach"><h4 class="play-animation navigation-item">linkedin</h4></a>
+        <h4 class="play-animation navigation-item bold" onclick="toggleNav()" data-section="contact">< contact</h4>
+        <a href="mailto:leach.le@northeastern.edu"><h4 class="play-animation navigation-item" data-section="contact">email</h4></a>
+        <a href="https://linkedin.com/in/levileach"><h4 class="play-animation navigation-item" data-section="contact">linkedin</h4></a>
     </div>
 
 <script src="animations.js"></script>

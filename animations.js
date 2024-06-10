@@ -26,8 +26,11 @@ function typeLetters(renderHello = true) {
 
 // type out the letters of the given text element
 function typeLetter(textElement) {
-    const text = textElement.innerText;
-    const typeSpeed = textElement.getAttribute("data-speed");
+    var text = textElement.innerText;
+    var typeSpeed = textElement.getAttribute("data-speed");
+    var elemSection = textElement.getAttribute("data-section")
+    var currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
+
     let currentIndex = 0;
     let speed = 100;
 
@@ -42,7 +45,7 @@ function typeLetter(textElement) {
 
     // change the color by making letters transparent if they aren't typed yet
     function changeColor() {
-        if (currentIndex <= text.length) {
+        if (currentIndex <= text.length && (elemSection == currSection || elemSection == "all")) {
             let lText = text.substring(0, currentIndex);
             let rText = text.substring(currentIndex, text.length);
             let rHTML = `<span style="color: rgba(0, 0, 0, 0)">${rText}</span>`
@@ -64,27 +67,33 @@ function toggleNav(clickedVal = "default") {
     const projNav = document.getElementById("project-navigation");
     const abotNav = document.getElementById("about-navigation");
     const contNav = document.getElementById("contact-navigation");
+    var currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
+
 
     // update the display mode
     if (clickedVal === "default") {
+        document.documentElement.style.setProperty("--current-section", "default");
         mainNav.style.setProperty("display", "flex");
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "none");
     }
     else if (clickedVal === "projects") {
+        document.documentElement.style.setProperty("--current-section", "projects");
         mainNav.style.setProperty("display", "none");
         projNav.style.setProperty("display", "flex");
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "none");
     }
     else if (clickedVal === "contact") {
+        document.documentElement.style.setProperty("--current-section", "contact");
         mainNav.style.setProperty("display", "none");
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "flex");
     }
     else if (clickedVal === "about") {
+        document.documentElement.style.setProperty("--current-section", "about");
         mainNav.style.setProperty("display", "none");
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "flex");
@@ -92,6 +101,8 @@ function toggleNav(clickedVal = "default") {
     }
 
     typeLetters(renderHello = false);
+//    currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
+//    console.log(currSection);
 }
 
 
