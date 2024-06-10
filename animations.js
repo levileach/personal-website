@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const textElements = Array.from(document.getElementsByClassName('play-animation'));
     typeLetters();
+    toggleNav();
 });
 
 
@@ -24,8 +25,21 @@ function typeLetters(renderHello = true) {
 
 function typeLetter(textElement) {
     const fullText = textElement.getAttribute("data-text");
+    const typeFast = textElement.getAttribute("data-speed");
+
     let index = 0;
-    const speed = 100;
+    let speed = 100;
+
+    if (typeFast === null) {
+        // do nothing
+    }
+    else if (typeFast == "fast") {
+        speed = speed / 2;
+    }
+    else if (typeFast == "faster") {
+        speed = speed / 6;
+    }
+
     textElement.textContent = '';
     typeLetterHelper(textElement, fullText, index, speed);
 }
@@ -33,33 +47,51 @@ function typeLetter(textElement) {
 function typeLetterHelper(textElement, fullText, index, speed) {
     if (index < fullText.length) {
         textElement.textContent = fullText.substring(0, index + 1);
+        textElement.text = fullText.substring(0, index + 1);
         index++;
         setTimeout(typeLetterHelper, speed, textElement, fullText, index, speed);
     }
 }
 
 
-function toggleProjects() {
+function toggleNav(clickedVal = "default") {
     const mainNav = document.getElementById("main-navigation");
     const projNav = document.getElementById("project-navigation");
-
+    const abotNav = document.getElementById("about-navigation");
+    console.log(clickedVal);
     // get our current display mode
-    var r = document.querySelector(":root");
-    var rs = getComputedStyle(r);
-    var displayMode = rs.getPropertyValue("--site-display");
-    console.log(displayMode);
+//    var r = document.querySelector(":root");
+//    var rs = getComputedStyle(r);
+//    var displayMode = rs.getPropertyValue("--site-display");
 
     // update the display mode
-    if (displayMode === "default") {
-        r.style.setProperty("--site-display", "projects");
-        mainNav.style.setProperty("display", "none");
-        projNav.style.setProperty("display", "flex");
-        typeLetters(renderHello = false);
-    }
-    else {
-        r.style.setProperty("--site-display", "default");
+    if (clickedVal === "default") {
         mainNav.style.setProperty("display", "flex");
         projNav.style.setProperty("display", "none");
-        typeLetters(renderHello = false);
+        abotNav.style.setProperty("display", "none");
     }
+    else if (clickedVal === "projects") {
+        mainNav.style.setProperty("display", "none");
+        projNav.style.setProperty("display", "flex");
+        abotNav.style.setProperty("display", "none");
+    }
+    else {
+        mainNav.style.setProperty("display", "none");
+        projNav.style.setProperty("display", "none");
+        abotNav.style.setProperty("display", "flex");
+    }
+
+    typeLetters(renderHello = false);
+
+//    r.style.setProperty("--site-display", "projects");
+//            mainNav.style.setProperty("display", "none");
+//            projNav.style.setProperty("display", "flex");
+//            typeLetters(renderHello = false);
+//
+//
+//        r.style.setProperty("--site-display", "default");
+//        mainNav.style.setProperty("display", "flex");
+//        projNav.style.setProperty("display", "none");
+//        typeLetters(renderHello = false);
+//    }
 }
