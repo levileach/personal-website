@@ -37,7 +37,7 @@ function typeLetter(textElement) {
         speed = speed / 2;
     }
     else if (typeFast == "faster") {
-        speed = speed / 6;
+        speed = speed / 5;
     }
 
     textElement.textContent = '';

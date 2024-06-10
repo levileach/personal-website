@@ -60,6 +60,9 @@ a {
     overflow: overflow;
 }
 
+.about-text {
+    font-size: 1rem;
+}
 
 #project-navigation {
     display: none;
