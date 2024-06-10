@@ -38,7 +38,7 @@ function typeLetter(textElement) {
         speed = speed / 2
     }
     else if (typeSpeed == "faster") {
-        speed = speed / 6
+        speed = speed / 8
     }
 
     textElement.innerHTML = `<span style="color: rgba(0, 0, 0, 0)">${text}</span>`
