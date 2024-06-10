@@ -72,3 +72,15 @@ a {
     margin: 0.5rem 0;
     width: 100%;
 }
+
+
+#projects {
+    background-color: pink;
+}
+
+#project-options {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: orange;
+}
