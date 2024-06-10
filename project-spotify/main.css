@@ -63,14 +63,14 @@ a.anchor {
 .site-title {
     font-weight: normal;
     margin: 0;
-    padding: 0;
+    padding: 3% 0 0 0;
     color: var(--background-color);
 }
 
 
 .author-text {
     text-align: left;
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 .date-text {
