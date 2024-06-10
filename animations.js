@@ -101,39 +101,4 @@ function toggleNav(clickedVal = "default") {
     }
 
     typeLetters(renderHello = false);
-//    currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
-//    console.log(currSection);
 }
-
-
-
-
-//function typeLetter(textElement) {
-//    const fullText = textElement.getAttribute("data-text");
-//    const typeFast = textElement.getAttribute("data-speed");
-//
-//    let index = 0;
-//    let speed = 100;
-//
-//    if (typeFast === null) {
-//        // do nothing
-//    }
-//    else if (typeFast == "fast") {
-//        speed = speed / 2;
-//    }
-//    else if (typeFast == "faster") {
-//        speed = speed / 5;
-//    }
-//
-//    textElement.textContent = '';
-//    typeLetterHelper(textElement, fullText, index, speed);
-//}
-//
-//function typeLetterHelper(textElement, fullText, index, speed) {
-//    if (index < fullText.length) {
-//        textElement.textContent = fullText.substring(0, index + 1);
-//        textElement.text = fullText.substring(0, index + 1);
-//        index++;
-//        setTimeout(typeLetterHelper, speed, textElement, fullText, index, speed);
-//    }
-//}
