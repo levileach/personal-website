@@ -9,25 +9,11 @@ body {
     width: 100dvw;
     height: 100dvh;
     color: #313131;
-    /*
-    background:
-        url('images/graphy-dark.png'),
-        linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 40%),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 20%),
-        linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 5%);
-    */
-    /*
-    background:
-        url('images/graphy-dark.png'),
-        linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
-    */
-
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    font-family: Arial, sans-serif;
+    font-family: Courier, monospace;
     background:
         url('images/graphy-dark.png'),
         linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)),
@@ -44,7 +30,6 @@ a {
 
 
 .play-animation {
-    font-family: Courier, monospace;
     overflow: hidden;
     whitespace: nowrap;
     font-weight: normal;
@@ -57,7 +42,15 @@ a {
     flex-grow: 1;
 }
 
+.about-text {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 8dvh 0 0 0;
+}
+
+
 #hello {
+
     font-size: 3rem;
     font-weight: semibold;
 }
