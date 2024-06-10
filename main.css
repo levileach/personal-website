@@ -1,4 +1,8 @@
 
+:root {
+    --site-display: default;
+}
+
 
 body {
     margin: 0;
@@ -74,13 +78,10 @@ a {
 }
 
 
-#projects {
-    background-color: pink;
+#project-navigation {
+    display: none;
 }
 
-#project-options {
-    position: relative;
-    top: 0;
-    left: 0;
-    background: orange;
+.bold {
+    font-weight: bolder;
 }
