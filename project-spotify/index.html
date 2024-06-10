@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Levi Leach, DS4200 Assignment 8B</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <p class="author-text">Levi Leach</p>
+    <div class="align-center">
+        <p class="course-title">DS4200, Assignment 8B</p>
+        <h2 class="site-title">Exploring Spotify Track Data</h2>
+    </div>
+    <p class="date-text">April 2nd, 2021</p>
+</div>
+
+<div class="link-container" id="link-container">
+    Go to:
+    <a href="#data-section"><h3 class="nav-button">The Data</h3></a>
+    <a href="#attribute-section"><h3 class="nav-button">Attributes</h3></a>
+    <a href="#scatter-section"><h3 class="nav-button">Explore Relationships</h3></a>
+    <a href="#line-section"><h3 class="nav-button">Find Trends</h3></a>
+    <a href="#search-section"><h3 class="nav-button">Search a Track</h3></a>
+</div>
+
+<div class="data-description-container top-border">
+    <a class="anchor" id="data-section"></a>
+    <h2 class="section-title">The Dataset</h2>
+    <h3 class="dataset-subtitle">Source and Explanation</h3>
+    <p class="dataset-paragraph">
+        The dataset used in this project was obtained from Kaggle
+        <a href="https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks" class="source-citation"
+           target="_blank">(https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks),</a> and contains
+        the audio features of about 175,000 songs in the Spotify database released between 1921 and 2021.
+        The first visualization (scatterplot) represents a random sampling of 1000 tracks from the dataset, while the
+        other visualizations represent the entire dataset.
+    </p>
+    <h3 class="dataset-subtitle">Motivation</h3>
+    <p class="dataset-paragraph">As an avid music listener, this project presented an opportunity to dive deeper
+        into understanding one of my interests from the perspective of a data scientist. Are there any common
+        relationships or correlations between the various attributes of tracks? Are there any significant trends in the
+        types of published music? How do the qualities of my favorite songs compare to the "average" song?
+        All of these questions are explored through the visualizations created.</p>
+    <h3 class="dataset-subtitle">Insights</h3>
+    <p class="dataset-paragraph">
+        In the <b>first visualization</b>, I was surprised to see correlations weaker than what
+        was expected across several relationships. For example, a strong positive correlation was expected between
+        danceability and tempo (faster songs are better to dance to). Instead, a very weak correlation existed.
+        Across attributes, correlations tend to fall between -0.5 and +0.5, representing weak to moderate relationships.
+        <br><br>
+
+        In the <b>second visualization</b>, there appears to be a significant shift in trends beginning in
+        the 1950s. Most significantly, acousticness begins to plummet and energy rises rapidly around this time.
+        Moreover, year-to-year averages appear much more chaotic prior to 1950. Another trend of note is that in the
+        1990s, the percentage of tracks that are explicit rises dramatically. This can likely be attributed to the rise
+        of hip-hop and rap music, which is frequently explicit.
+        <br><br>
+
+        With the <b>third visualization</b> being user-directed, insights will be unique to each person using it.
+        After searching some of the songs I frequently listen to, I found that my taste is higher in
+        danceability and energy than the median, and lower in acousticness.
+    </p>
+</div>
+
+<div class="data-description-container top-border">
+    <a class="anchor" id="attribute-section"></a>
+    <h2 class="section-title">Attribute Explanations</h2>
+    <h3 class="dataset-subtitle">The audio features of the tracks, as determined by Spotify</h3>
+
+    <table class="data-description-table">
+        <tr>
+            <th style="width: 25%">Attribute</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Acousticness</td>
+            <td>A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence
+                the track is acoustic.
+            </td>
+        </tr>
+        <tr>
+            <td>Danceability</td>
+            <td>How suitable a track is for dancing (from 0.0 to 1.0) based on a combination of musical elements
+                including tempo, rhythm stability, beat strength, and overall regularity.
+            </td>
+        </tr>
+        <tr>
+            <td>Energy</td>
+            <td> A measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy.
+            </td>
+        </tr>
+        <tr>
+            <td>Explicit</td>
+            <td>Whether or not the track has explicit lyrics. 0 if false, 1 if true.
+            </td>
+        </tr>
+        <tr>
+            <td>Liveness</td>
+            <td>Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.
+            </td>
+        </tr>
+        <tr>
+            <td>Loudness</td>
+            <td>The overall loudness of a track in decibels (dB), averaged across the entire track. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude).
+            </td>
+        </tr>
+        <tr>
+            <td>Popularity</td>
+            <td>A value between 0 and 100, with 100 being the most popular. The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are.
+            </td>
+        </tr>
+        <tr>
+            <td>Speechiness</td>
+            <td>Detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value.
+            </td>
+        </tr>
+        <tr>
+            <td>Tempo</td>
+            <td>The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece.
+            </td>
+        </tr>
+        <tr>
+            <td>Valence</td>
+            <td>A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
+            </td>
+        </tr>
+    </table>
+    <p class="dataset-paragraph" style="padding: 1%"><i>Source:
+        <a href="https://developer.spotify.com/documentation/web-api/reference/" class="source-citation"
+           target="_blank">https://developer.spotify.com/documentation/web-api/reference/</a></i></p>
+</div>
+
+
+<div class="viz-container top-border">
+    <a class="anchor" id="scatter-section"></a>
+    <div class="dropdown-container">
+        <div class="dropdown-menu">
+            <label for="x-axis-selection">X Axis Attribute</label><select id="x-axis-selection"></select>
+        </div>
+        <div class="dropdown-menu">
+            <label for="y-axis-selection">Y Axis Attribute</label><select id="y-axis-selection"></select>
+        </div>
+    </div>
+
+    <div id="scatter-viz" class="align-center">
+        <h2 class="viz-title">Explore Relationships</h2>
+        <h4 class="viz-subtitle">Do any relationships exist between the attributes of tracks?<br>
+            Select from the dropdown menus to find out. Hover on a point to see that song's data.</h4>
+        <script type="text/javascript" src="scatter.js"></script>
+    </div>
+</div>
+
+<div class="viz-container top-border">
+    <a class="anchor" id="line-section"></a>
+    <div id="line-viz" class="align-center top-margin">
+        <h2 class="viz-title">How Have Songs Changed Over the Years?</h2>
+        <h4 class="viz-subtitle">See the average score of all songs across time.<br>
+            Highlight an area to zoom.</h4>
+        <button type="button" id="reset-line">Reset Zoom</button>
+        <script type="text/javascript" src="line.js"></script>
+    </div>
+</div>
+
+<div class="viz-container top-border">
+    <a class="anchor" id="search-section"></a>
+    <p class="current-track-data" id="current-song-info">Current track:</p>
+    <!--ATTRIBUTION: Method for searchable dropdown menu obtained (and modified) from:
+        https://www.w3schools.com/howto/howto_js_filter_dropdown.asp -->
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="search-button">Click to search an artist or track</button>
+        <div id="dropdown-container" class="dropdown-content">
+            <label for="song-search"></label>
+            <input type="text" placeholder="Search.." id="song-search" onkeyup="filterDropdown()">
+        </div>
+    </div>
+
+    <div id="search-viz" class="align-center top-margin">
+        <h2 class="viz-title">How Does Your Song Compare?</h2>
+        <h4 class="viz-subtitle">Search a song and compare its attributes to the medians of all songs.<br>
+            Note: Not all songs in Spotify's database are present in the dataset (about 175,000 tracks are searchable).
+        </h4>
+        <script type="text/javascript" src="addSearch.js"></script>
+        <script type="text/javascript" src="searchSong.js"></script>
+    </div>
+
+
+</div>
+
+
+<div class="footer">
+
+</div>
+</body>
+</html>
