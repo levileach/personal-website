@@ -28,6 +28,7 @@ function typeLetters(renderHello = true) {
 function typeLetter(textElement) {
     const text = textElement.innerText;
     const typeSpeed = textElement.getAttribute("data-speed");
+    const hiddenColor = "color: rgba(0, 0, 0, 0)"
     let currentIndex = 0;
     let speed = 100;
 
@@ -38,12 +39,14 @@ function typeLetter(textElement) {
         speed = speed / 8
     }
 
+    textElement.innerHTML = `<span style='"'${hiddenColor}'"'>${text}</span>`
+
     // change the color by making letters transparent if they aren't typed yet
     function changeColor() {
         if (currentIndex <= text.length) {
             let lText = text.substring(0, currentIndex);
             let rText = text.substring(currentIndex, text.length);
-            let rHTML = `<span style="color: rgba(0, 0, 0, 0)">${rText}</span>`
+            let rHTML = `<span style='"'${hiddenColor}'"'>${rText}</span>`
             let fHTML = lText + rHTML
             textElement.innerHTML = fHTML;
             currentIndex++;
