@@ -55,7 +55,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     font-size: 2rem;
-    margin: 0 10dvw 10dvh 10dvw;
+    margin: 0 10dvw 6dvh 10dvw;
 }
 
 .navigation-item {
@@ -80,7 +80,7 @@ a {
 
 
 #my-name {
-    margin: 10dvh 0 0 0;
+    margin: 6dvh 0 0 0;
     font-style: italic;
 }
 
