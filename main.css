@@ -78,9 +78,9 @@ a {
     font-weight: bold;
 }
 
-.my-name {
-    margin: 0 10dvw 10dvh 10dvw;
-}
 
+#my-name {
+    margin: 10dvh 0 0 0;
+}
 
 
