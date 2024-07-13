@@ -1,13 +1,19 @@
 
 :root {
     --current-section: default;
+    --color-text: #313131;
+    --color-hover: #707070;
+    --text-size-default: 2rem;
+    --text-size-default-long: 1.5rem;
+    --text-size-small: 1.5rem;
+    --text-size-small-long: 1rem;
 }
 
 body {
     margin: 0;
     width: 100dvw;
     height: 100dvh;
-    color: #313131;
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -37,7 +43,6 @@ a {
 }
 
 .site-hello {
-    font-size: 4rem;
     margin: 7dvh 10dvw 1dvh 10dvw;
     flex-grow: 1;
 }
@@ -54,7 +59,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 2rem;
+    font-size: var(--text-size-default);
     margin: 0 10dvw 6dvh 10dvw;
 }
 
@@ -63,9 +68,15 @@ a {
     overflow: overflow;
 }
 
+.navigation-title:hover {
+    color: var(--color-hover);
+    cursor: pointer;
+    ## color: orange;
+    ## font-weight: bold;
+}
 
 .about-text {
-    font-size: 1.5rem;
+    font-size: var(--text-size-default-long);
     font-weight: normal;
 }
 

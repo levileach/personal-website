@@ -32,7 +32,7 @@ function typeLetter(textElement) {
     var currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
 
     let currentIndex = 0;
-    let speed = 100;
+    let speed = 60;
 
     if (typeSpeed == "fast") {
         speed = speed / 2
