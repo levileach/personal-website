@@ -2,8 +2,7 @@
 :root {
     --current-section: default;
     --color-text: #313131;
-    ## --color-hover: #707070;
-    --color-hover: pink;
+    --color-hover: #707070;
     --text-size-default: 2rem;
     --text-size-default-long: 1.5rem;
     --text-size-small: 1.5rem;
@@ -100,6 +99,15 @@ a {
 .title-contact:hover {color: #226F54;}
 .title-projects:hover {color: #A63A50;}
 .title-resume:hover {color: #EE964B;}
+
+
+/* set some hover behavior for mobile (the colors render weird on touch clicks) */
+@media (pointer: none), (pointer: coarse) {
+    .title-about:hover {color: var(--color-hover);}
+    .title-contact:hover {color: var(--color-hover);}
+    .title-projects:hover {color: var(--color-hover);}
+    .title-resume:hover {color: var(--color-hover);}
+}
 
 
 
