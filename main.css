@@ -70,7 +70,7 @@ a:hover {
 .navigation-item {
     margin: 0.5rem 0;
     overflow: overflow;
-    text-shadow: 0 0 8px white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 .navigation-title:hover {
@@ -93,7 +93,7 @@ a:hover {
 
 
 #my-name {
-    margin: 18dvh 0 0 0;
+    margin: 23dvh 0 0 0;
     font-style: italic;
 }
 
@@ -120,7 +120,7 @@ a:hover {
     right: 0;
     margin: 0;
     z-index: -1;
-    max-width: 80dvw;
-    max-height: 60dvh;
+    max-width: 75dvw;
+    max-height: 75dvh;
     filter: saturate(80%);
 }
