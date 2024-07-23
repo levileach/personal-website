@@ -40,6 +40,9 @@ function typeLetter(textElement) {
     else if (typeSpeed == "faster") {
         speed = speed / 8
     }
+    else if (typeSpeed == "slow") {
+        speed = speed * 2
+    }
 
     textElement.innerHTML = `<span style="color: rgba(0, 0, 0, 0)">${text}</span>`
 
@@ -82,7 +85,9 @@ function toggleNav(clickedVal = "default") {
     const projNav = document.getElementById("project-navigation");
     const abotNav = document.getElementById("about-navigation");
     const contNav = document.getElementById("contact-navigation");
+    const spotNav = document.getElementById("project-spotify-navigation");
     var currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
+
 
     // update the display mode
     if (clickedVal === "default") {
@@ -91,6 +96,7 @@ function toggleNav(clickedVal = "default") {
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "none");
+        spotNav.style.setProperty("display", "none");
     }
     else if (clickedVal === "projects") {
         document.documentElement.style.setProperty("--current-section", "projects");
@@ -98,6 +104,7 @@ function toggleNav(clickedVal = "default") {
         projNav.style.setProperty("display", "flex");
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "none");
+        spotNav.style.setProperty("display", "none");
     }
     else if (clickedVal === "contact") {
         document.documentElement.style.setProperty("--current-section", "contact");
@@ -105,6 +112,7 @@ function toggleNav(clickedVal = "default") {
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "flex");
+        spotNav.style.setProperty("display", "none");
     }
     else if (clickedVal === "about") {
         document.documentElement.style.setProperty("--current-section", "about");
@@ -112,6 +120,15 @@ function toggleNav(clickedVal = "default") {
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "flex");
         contNav.style.setProperty("display", "none");
+        spotNav.style.setProperty("display", "none");
+    }
+    else if (clickedVal === "project-spotify") {
+        document.documentElement.style.setProperty("--current-section", "project-spotify");
+        mainNav.style.setProperty("display", "none");
+        projNav.style.setProperty("display", "none");
+        abotNav.style.setProperty("display", "none");
+        contNav.style.setProperty("display", "none");
+        spotNav.style.setProperty("display", "flex");
     }
 
     typeLetters(renderHello = false);

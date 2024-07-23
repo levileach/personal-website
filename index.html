@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>levi leach</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.png">
 
 <!--    some fonts from google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,18 +27,18 @@
 
 <!-- the main navigation menu -->
     <div id="main-navigation" class="navigation">
-        <h4 id="about" class="play-animation navigation-item navigation-title title-about" onclick="toggleNav('about')" data-section="default">about</h4>
-        <h4 id="projects" class="play-animation navigation-item navigation-title title-projects" onclick="toggleNav('projects');" data-section="default">projects</h4>
-        <h4 id="contact" class="play-animation navigation-item navigation-title title-contact" onclick="toggleNav('contact');" data-section="default">contact</h4>
-        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item navigation-title title-resume" data-section="default">resumé</h4></a>
+        <h4 id="about" class="play-animation navigation-item hover-item title-about" onclick="toggleNav('about')" data-section="default">about</h4>
+        <h4 id="projects" class="play-animation navigation-item hover-item title-projects" onclick="toggleNav('projects');" data-section="default">projects</h4>
+        <h4 id="contact" class="play-animation navigation-item hover-item title-contact" onclick="toggleNav('contact');" data-section="default">contact</h4>
+        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item hover-item title-resume" data-section="default">resumé</h4></a>
         <h4 id="my-name" class="play-animation navigation-item" data-section="default" data-speed="fast">—- levi leach</h4>
     </div>
 
 
 <!-- the about navigation menu -->
-    <div id="about-navigation" class="navigation subnavigation">
-        <h4 class="play-animation navigation-item navigation-title title-about bold" onclick="toggleNav()" data-section="about">< about</h4>
-        <h4 class="navigation-item about-text play-animation" data-speed="faster" data-section="about">
+    <div id="about-navigation" class="navigation sub-navigation">
+        <h4 class="play-animation navigation-item title-about hover-item bold" onclick="toggleNav()" data-section="about">< about</h4>
+        <h4 class="navigation-item long-text play-animation" data-speed="faster" data-section="about">
             b.s. in computer science and economics from northeastern university (honors program, dean's list);
             located in new york city;
             interested in data (analytics, visualizations, consulting),
@@ -47,19 +47,30 @@
     </div>
 
 
-<!-- the project navigation menu-->
-    <div id="project-navigation" class="navigation subnavigation">
-        <h4 class="play-animation navigation-item navigation-title title-projects bold" onclick="toggleNav()" data-section="projects">< projects</h4>
-        <a href="https://github.com/levileach" target="_blank"><h4 class="play-animation navigation-item" data-section="projects">github</h4></a>
-        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item" data-section="projects" data-speed="fast">spotify visualizations</h4></a>
+<!-- the project navigation menu -->
+    <div id="project-navigation" class="navigation sub-navigation">
+        <h4 class="play-animation navigation-item hover-item title-projects bold" onclick="toggleNav()" data-section="projects">< projects</h4>
+        <a href="https://github.com/levileach" target="_blank"><h4 class="play-animation navigation-item hover-item title-github" data-section="projects">github</h4></a>
+        <h4 class="play-animation navigation-item title-spotify  hover-item hover-pointer" data-section="projects" onclick="toggleNav('project-spotify')" data-speed="fast">spotify vis</h4>
+<!--        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item" data-section="projects" data-speed="fast">spotify vis</h4></a>-->
+    </div>
+
+<!-- the spotify project navigation menu -->
+    <div id="project-spotify-navigation" class="navigation sub-navigation">
+        <h4 class="play-animation navigation-item title-spotify hover-item bold" onclick="toggleNav('projects')" data-section="project-spotify">< spotify vis</h4>
+        <h4 class="play-animation navigation-item long-text" data-section="project-spotify" data-speed="faster">
+            my final personal project for information visualization (ds4200),
+            exploring an open source dataset of spotify tracks through a series
+            of interactive web-based visualizations; utilizes the d3 library, html, css, and javascript; the dataset, visualization, and general assignment were open-ended and up to my own interests</h4>
+        <a href="project-spotify/index.html" target="_blank"><h4 class="play-animation navigation-item hover-item bold title-spotify" data-section="project-spotify" data-speed="slow">visit</h4></a>
     </div>
 
 
 <!-- the contact navigation menu -->
-    <div id="contact-navigation" class="navigation subnavigation">
-        <h4 class="play-animation navigation-item navigation-title title-contact bold" onclick="toggleNav()" data-section="contact">< contact</h4>
-        <a href="mailto:leach.le@northeastern.edu"><h4 class="play-animation navigation-item" data-section="contact">email</h4></a>
-        <a href="https://linkedin.com/in/levileach" target="_blank"><h4 class="play-animation navigation-item" data-section="contact">linkedin</h4></a>
+    <div id="contact-navigation" class="navigation sub-navigation">
+        <h4 class="play-animation navigation-item hover-item title-contact bold" onclick="toggleNav()" data-section="contact">< contact</h4>
+        <a href="mailto:leach.le@northeastern.edu"><h4 class="play-animation navigation-item hover-item" data-section="contact">email</h4></a>
+        <a href="https://linkedin.com/in/levileach" target="_blank"><h4 class="play-animation navigation-item title-linkedin hover-item" data-section="contact">linkedin</h4></a>
     </div>
 
     <img id="face" src="images/me.png" alt="none">
