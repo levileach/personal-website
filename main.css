@@ -4,9 +4,7 @@
     --color-text: #313131;
     --color-hover: #707070;
     --text-size-default: 2rem;
-    --text-size-default-long: 1.5rem;
-    --text-size-small: 1.5rem;
-    --text-size-small-long: 1rem;
+    --text-size-long: 1.5rem;
 }
 
 body {
@@ -80,8 +78,9 @@ a:hover {
 }
 
 .about-text {
-    font-size: var(--text-size-default-long);
+    font-size: var(--text-size-long);
     font-weight: normal;
+    padding-bottom: 0;
 }
 
 
