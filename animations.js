@@ -137,5 +137,5 @@ function toggleNav(clickedVal = "default") {
         spotNav.style.setProperty("display", "flex");
     }
 
-    typeLetters(renderHello = false);
+    typeLetters(renderHello = true);
 }
