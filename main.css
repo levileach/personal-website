@@ -139,13 +139,13 @@ a {
     filter: saturate(80%) opacity(0.7) drop-shadow(10px 10px 10px) blur(0px);
   }
   to {
-    filter: saturate(80%) opacity(0.3) drop-shadow(10px 10px 10px) blur(10px);
+    filter: saturate(80%) opacity(0.4) drop-shadow(10px 10px 10px) blur(10px);
   }
 }
 
 @keyframes un-blur-face {
   from {
-    filter: saturate(80%) opacity(0.3) drop-shadow(10px 10px 10px) blur(10px);
+    filter: saturate(80%) opacity(0.4) drop-shadow(10px 10px 10px) blur(10px);
   }
   to {
     filter: saturate(80%) opacity(0.7) drop-shadow(10px 10px 10px) blur(0px);
