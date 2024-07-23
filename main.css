@@ -73,7 +73,6 @@ a:hover {
 }
 
 .navigation-title:hover {
-    ## color: var(--color-hover);
     cursor: pointer;
 }
 
@@ -93,7 +92,7 @@ a:hover {
 
 
 #my-name {
-    margin: 6dvh 0 0 0;
+    margin: 15dvh 0 0 0;
     font-style: italic;
 }
 
@@ -120,6 +119,7 @@ a:hover {
     right: 0;
     margin: 0;
     z-index: -1;
-    max-width: 80dvw;
-    max-height: 60dvh;
+    max-width: 60dvw;
+    max-height: 80dvh;
+    filter: saturate(80%);
 }
