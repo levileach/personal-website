@@ -63,7 +63,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: var(--text-size-default);
+    font-size: max(1rem, min(var(--text-size-default), 6dvw));
     margin: 0 10dvw 6dvh 10dvw;
 }
 
