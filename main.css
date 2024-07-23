@@ -70,6 +70,7 @@ a:hover {
 .navigation-item {
     margin: 0.5rem 0;
     overflow: overflow;
+    text-shadow: 0 0 8px white;
 }
 
 .navigation-title:hover {
