@@ -119,6 +119,7 @@ a:hover {
     bottom: 0;
     right: 0;
     margin: 0;
-    height: min(75dvh, 100dvw);
     z-index: -1;
+    max-width: 80dvw;
+    max-height: 60dvh;
 }
