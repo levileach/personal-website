@@ -62,7 +62,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     font-size: var(--text-size-default);
-    margin: 7dvh 10dvw 6dvh 10dvw;
+    margin: 7dvh 10dvw 0 10dvw;
 }
 
 .navigation-item {
@@ -82,7 +82,6 @@ a {
 
 .long-text {
     font-size: var(--text-size-long);
-    /* font-weight: normal; */
     padding-bottom: 0;
 }
 
