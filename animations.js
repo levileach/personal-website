@@ -81,6 +81,7 @@ function clearText() {
 // toggle which main menu to display
 function toggleNav(clickedVal = "default") {
     clearText();
+    const siteHel = document.getElementById("site-hello");
     const mainNav = document.getElementById("main-navigation");
     const projNav = document.getElementById("project-navigation");
     const abotNav = document.getElementById("about-navigation");
@@ -92,6 +93,7 @@ function toggleNav(clickedVal = "default") {
     // update the display mode
     if (clickedVal === "default") {
         document.documentElement.style.setProperty("--current-section", "default");
+        siteHel.style.setProperty("display", "flex");
         mainNav.style.setProperty("display", "flex");
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "none");
@@ -100,6 +102,7 @@ function toggleNav(clickedVal = "default") {
     }
     else if (clickedVal === "projects") {
         document.documentElement.style.setProperty("--current-section", "projects");
+        siteHel.style.setProperty("display", "none");
         mainNav.style.setProperty("display", "none");
         projNav.style.setProperty("display", "flex");
         abotNav.style.setProperty("display", "none");
@@ -108,6 +111,7 @@ function toggleNav(clickedVal = "default") {
     }
     else if (clickedVal === "contact") {
         document.documentElement.style.setProperty("--current-section", "contact");
+        siteHel.style.setProperty("display", "none");
         mainNav.style.setProperty("display", "none");
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "none");
@@ -116,6 +120,7 @@ function toggleNav(clickedVal = "default") {
     }
     else if (clickedVal === "about") {
         document.documentElement.style.setProperty("--current-section", "about");
+        siteHel.style.setProperty("display", "none");
         mainNav.style.setProperty("display", "none");
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "flex");
@@ -124,6 +129,7 @@ function toggleNav(clickedVal = "default") {
     }
     else if (clickedVal === "project-spotify") {
         document.documentElement.style.setProperty("--current-section", "project-spotify");
+        siteHel.style.setProperty("display", "none");
         mainNav.style.setProperty("display", "none");
         projNav.style.setProperty("display", "none");
         abotNav.style.setProperty("display", "none");

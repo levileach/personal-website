@@ -4,7 +4,7 @@
     --color-text: #313131;
     --color-hover: #707070;
     --text-size-default: 2rem;
-    --text-size-long: 1rem;
+    --text-size-long: 1.5rem;
 }
 
 body {
@@ -41,7 +41,7 @@ a {
     text-align: left;
 }
 
-.site-hello {
+#site-hello {
     margin: 7dvh 10dvw 1dvh 10dvw;
     flex-grow: 1;
 }
@@ -62,7 +62,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     font-size: var(--text-size-default);
-    margin: 0 10dvw 6dvh 10dvw;
+    margin: 7dvh 10dvw 6dvh 10dvw;
 }
 
 .navigation-item {
@@ -77,11 +77,12 @@ a {
 
 .visit-button {
     padding-top: 3dvh;
+    font-weight: bold;
 }
 
 .long-text {
     font-size: var(--text-size-long);
-    font-weight: normal;
+    /* font-weight: normal; */
     padding-bottom: 0;
 }
 
