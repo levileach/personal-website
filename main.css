@@ -57,6 +57,9 @@ a:hover {
     font-weight: semibold;
 }
 
+.subnavigation {
+    padding-bottom: 35dvh;
+}
 
 
 .navigation {
@@ -70,7 +73,6 @@ a:hover {
 .navigation-item {
     margin: 0.5rem 0;
     overflow: overflow;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 .navigation-title:hover {
@@ -122,5 +124,5 @@ a:hover {
     z-index: -1;
     max-width: 75dvw;
     max-height: 75dvh;
-    filter: saturate(80%);
+    filter: saturate(80%) opacity(0.7) drop-shadow(10px 10px 10px);
 }
