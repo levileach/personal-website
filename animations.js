@@ -99,6 +99,7 @@ function toggleNav(clickedVal = "default") {
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "none");
         spotNav.style.setProperty("display", "none");
+        document.getElementById("face").style.animationName = "un-blur-face";
     }
     else if (clickedVal === "projects") {
         document.documentElement.style.setProperty("--current-section", "projects");
@@ -108,6 +109,7 @@ function toggleNav(clickedVal = "default") {
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "none");
         spotNav.style.setProperty("display", "none");
+        document.getElementById("face").style.animationName = "blur-face";
     }
     else if (clickedVal === "contact") {
         document.documentElement.style.setProperty("--current-section", "contact");
@@ -117,6 +119,7 @@ function toggleNav(clickedVal = "default") {
         abotNav.style.setProperty("display", "none");
         contNav.style.setProperty("display", "flex");
         spotNav.style.setProperty("display", "none");
+        document.getElementById("face").style.animationName = "blur-face";
     }
     else if (clickedVal === "about") {
         document.documentElement.style.setProperty("--current-section", "about");
@@ -126,6 +129,7 @@ function toggleNav(clickedVal = "default") {
         abotNav.style.setProperty("display", "flex");
         contNav.style.setProperty("display", "none");
         spotNav.style.setProperty("display", "none");
+        document.getElementById("face").style.animationName = "blur-face";
     }
     else if (clickedVal === "project-spotify") {
         document.documentElement.style.setProperty("--current-section", "project-spotify");

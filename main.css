@@ -129,16 +129,25 @@ a {
     max-width: 75dvw;
     max-height: 75dvh;
     filter: saturate(80%) opacity(0.7) drop-shadow(10px 10px 10px);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 
-.add-blur {
-    filter: saturate(80%) opacity(0.4) blur(10px) drop-shadow(10px 10px 10px);
-    transition: all 1s;
+@keyframes blur-face {
+  from {
+    filter: saturate(80%) opacity(0.7) drop-shadow(10px 10px 10px) blur(0px);
+  }
+  to {
+    filter: saturate(80%) opacity(0.3) drop-shadow(10px 10px 10px) blur(10px);
+  }
 }
 
-.remove-blur {
-    filter: saturate(80%) opacity(0.7) drop-shadow(10px 10px 10px);
-    transition: all 1s;
+@keyframes un-blur-face {
+  from {
+    filter: saturate(80%) opacity(0.3) drop-shadow(10px 10px 10px) blur(10px);
+  }
+  to {
+    filter: saturate(80%) opacity(0.7) drop-shadow(10px 10px 10px) blur(0px);
+  }
 }
-
