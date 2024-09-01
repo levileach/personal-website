@@ -2,19 +2,19 @@
 // play the typing animation upon page loading and rendering
 document.addEventListener('DOMContentLoaded', function() {
     const textElements = Array.from(document.getElementsByClassName('play-animation'));
-    typeLetters();
     toggleNav();
+    typeLetters();
 });
 
 
-function typeLetters(renderHello = true) {
+function typeLetters(renderAll = true) {
     const textElements = Array.from(document.getElementsByClassName('play-animation'));
 
     for (let i = 0; i < textElements.length; i++) {
         currElement = textElements[i];
         currElementSection = currElement.getAttribute("data-section");
 
-        if (renderHello == false && currElementSection == "all") {
+        if (renderAll == false && currElementSection == "all") {
             // do nothing if it's hello text and we don't want to render it
         }
         else {
@@ -26,8 +26,8 @@ function typeLetters(renderHello = true) {
 
 // type out the letters of the given text element
 function typeLetter(textElement) {
-
     var text = textElement.innerText;
+//    var text = textElement.innerHTML;
     var typeSpeed = textElement.getAttribute("data-speed");
     var elemSection = textElement.getAttribute("data-section")
     var currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
@@ -132,5 +132,5 @@ function toggleNav(clickedVal = "default") {
         subsectionSpotify.style.setProperty("display", "flex");
     }
 
-    typeLetters(renderHello = false);
+    typeLetters(renderAll = false);
 }
