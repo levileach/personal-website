@@ -12,9 +12,9 @@ function typeLetters(renderHello = true) {
 
     for (let i = 0; i < textElements.length; i++) {
         currElement = textElements[i];
-        currElementID = currElement.id;
+        currElementSection = currElement.getAttribute("data-section");
 
-        if (renderHello == false && currElementID == "hello") {
+        if (renderHello == false && currElementSection == "all") {
             // do nothing if it's hello text and we don't want to render it
         }
         else {
@@ -26,6 +26,7 @@ function typeLetters(renderHello = true) {
 
 // type out the letters of the given text element
 function typeLetter(textElement) {
+
     var text = textElement.innerText;
     var typeSpeed = textElement.getAttribute("data-speed");
     var elemSection = textElement.getAttribute("data-section")
@@ -81,65 +82,55 @@ function clearText() {
 // toggle which main menu to display
 function toggleNav(clickedVal = "default") {
     clearText();
-    const siteHel = document.getElementById("site-hello");
-    const mainNav = document.getElementById("main-navigation");
-    const projNav = document.getElementById("project-navigation");
-    const abotNav = document.getElementById("about-navigation");
-    const contNav = document.getElementById("contact-navigation");
-    const spotNav = document.getElementById("project-spotify-navigation");
+    const sectionIntro = document.getElementById("section-intro");
+    const sectionAbout = document.getElementById("section-about");
+    const sectionLinks = document.getElementById("section-links");
+    const subsectionContact = document.getElementById("subsection-contact");
+    const subsectionProject = document.getElementById("subsection-projects");
+    const subsectionSpotify = document.getElementById("subsection-spotify");
     var currSection = getComputedStyle(document.body).getPropertyValue("--current-section");
 
 
     // update the display mode
     if (clickedVal === "default") {
         document.documentElement.style.setProperty("--current-section", "default");
-        siteHel.style.setProperty("display", "flex");
-        mainNav.style.setProperty("display", "flex");
-        projNav.style.setProperty("display", "none");
-        abotNav.style.setProperty("display", "none");
-        contNav.style.setProperty("display", "none");
-        spotNav.style.setProperty("display", "none");
-        document.getElementById("face").style.animationName = "un-blur-face";
-    }
-    else if (clickedVal === "projects") {
-        document.documentElement.style.setProperty("--current-section", "projects");
-        siteHel.style.setProperty("display", "none");
-        mainNav.style.setProperty("display", "none");
-        projNav.style.setProperty("display", "flex");
-        abotNav.style.setProperty("display", "none");
-        contNav.style.setProperty("display", "none");
-        spotNav.style.setProperty("display", "none");
-        document.getElementById("face").style.animationName = "blur-face";
-    }
-    else if (clickedVal === "contact") {
-        document.documentElement.style.setProperty("--current-section", "contact");
-        siteHel.style.setProperty("display", "none");
-        mainNav.style.setProperty("display", "none");
-        projNav.style.setProperty("display", "none");
-        abotNav.style.setProperty("display", "none");
-        contNav.style.setProperty("display", "flex");
-        spotNav.style.setProperty("display", "none");
-        document.getElementById("face").style.animationName = "blur-face";
-    }
-    else if (clickedVal === "about") {
-        document.documentElement.style.setProperty("--current-section", "about");
-        siteHel.style.setProperty("display", "none");
-        mainNav.style.setProperty("display", "none");
-        projNav.style.setProperty("display", "none");
-        abotNav.style.setProperty("display", "flex");
-        contNav.style.setProperty("display", "none");
-        spotNav.style.setProperty("display", "none");
-        document.getElementById("face").style.animationName = "blur-face";
-    }
-    else if (clickedVal === "project-spotify") {
-        document.documentElement.style.setProperty("--current-section", "project-spotify");
-        siteHel.style.setProperty("display", "none");
-        mainNav.style.setProperty("display", "none");
-        projNav.style.setProperty("display", "none");
-        abotNav.style.setProperty("display", "none");
-        contNav.style.setProperty("display", "none");
-        spotNav.style.setProperty("display", "flex");
+        sectionIntro.style.setProperty("display", "flex");
+        sectionAbout.style.setProperty("display", "flex");
+        sectionLinks.style.setProperty("display", "flex");
+        subsectionContact.style.setProperty("display", "none");
+        subsectionProject.style.setProperty("display", "none");
+        subsectionSpotify.style.setProperty("display", "none");
     }
 
-    typeLetters(renderHello = true);
+    else if (clickedVal === "contact") {
+        document.documentElement.style.setProperty("--current-section", "contact");
+        sectionIntro.style.setProperty("display", "flex");
+        sectionAbout.style.setProperty("display", "flex");
+        sectionLinks.style.setProperty("display", "none");
+        subsectionContact.style.setProperty("display", "flex");
+        subsectionProject.style.setProperty("display", "none");
+        subsectionSpotify.style.setProperty("display", "none");
+    }
+
+    else if (clickedVal === "projects") {
+        document.documentElement.style.setProperty("--current-section", "projects");
+        sectionIntro.style.setProperty("display", "flex");
+        sectionAbout.style.setProperty("display", "flex");
+        sectionLinks.style.setProperty("display", "none");
+        subsectionContact.style.setProperty("display", "none");
+        subsectionProject.style.setProperty("display", "flex");
+        subsectionSpotify.style.setProperty("display", "none");
+    }
+
+    else if (clickedVal === "spotify") {
+        document.documentElement.style.setProperty("--current-section", "spotify");
+        sectionIntro.style.setProperty("display", "flex");
+        sectionAbout.style.setProperty("display", "flex");
+        sectionLinks.style.setProperty("display", "none");
+        subsectionContact.style.setProperty("display", "none");
+        subsectionProject.style.setProperty("display", "none");
+        subsectionSpotify.style.setProperty("display", "flex");
+    }
+
+    typeLetters(renderHello = false);
 }

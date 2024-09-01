@@ -3,83 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>levi leach</title>
+    <title>LEVI LEACH</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/x-icon" href="images/favicon2.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-<!--    some fonts from google fonts-->
+    <script src="animations.js"></script>
+<!--    some fonts from Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Gwendolyn:wght@400;700&family=Yellowtail&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
 
 
 <!-- the welcome text on the site -->
-    <div id="site-hello">
-        <a href="https://levileach.com"><h1 id="hello" class="play-animation" data-section="all">hello!</h1></a>
+    <div id="section-intro" class="body-item" data-section="all">
+        <a href="https://levileach.com"><h1 class="play-animation" data-section="all">LEVI B. LEACH</h1></a>
+    </div>
+
+<!-- the about text section -->
+    <div id="section-about" class="body-item navigation">
+        <p class="long-text play-animation" data-section="all" data-speed="faster">
+            PASSIONATE ABOUT SOFTWARE AND DATA (ANALYTICS, VISUALIZATIONS, PROGRAMMING)
+        </p>
+        <p class="long-text play-animation" data-section="all" data-speed="fast">
+            LOCATED IN NEW YORK CITY
+        </p>
+        <p class="long-text play-animation" data-section="all" data-speed="faster">
+            EDUCATED AT NORTHEASTERN UNIVERSITY (BS IN COMPUTER SCIENCE AND ECONOMICS; CUM LAUDE; HONOR'S PROGRAM; DEAN'S LIST)
+        </p>
     </div>
 
 
 
 <!-- the main navigation menu -->
-    <div id="main-navigation" class="navigation">
-        <h4 id="about" class="play-animation navigation-item hover-item title-about" onclick="toggleNav('about')" data-section="default">about</h4>
-        <h4 id="projects" class="play-animation navigation-item hover-item title-projects" onclick="toggleNav('projects');" data-section="default">projects</h4>
-        <h4 id="contact" class="play-animation navigation-item hover-item title-contact" onclick="toggleNav('contact');" data-section="default">contact</h4>
-        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item hover-item title-resume" data-section="default">resumé</h4></a>
-        <h4 id="my-name" class="play-animation navigation-item" data-section="default" data-speed="fast">—- LEVI B. LEACH</h4>
+    <div id="section-links" class="body-item navigation">
+        <h4 id="projects" class="play-animation navigation-item hover-item title-projects play-anima" onclick="toggleNav('projects');" data-section="default">PROJECTS</h4>
+        <h4 id="contact" class="play-animation navigation-item hover-item title-contact" onclick="toggleNav('contact');" data-section="default">CONTACT</h4>
+        <a href="resources/resume.pdf" download><h4 class="play-animation navigation-item hover-item title-resume" data-section="default">RESUME</h4></a>
     </div>
 
 
-<!-- the about navigation menu -->
-    <div id="about-navigation" class="navigation sub-navigation">
-        <h4 class="play-animation navigation-item title-about hover-item bold" onclick="toggleNav()" data-section="about">< about</h4>
-        <h4 class="navigation-item long-text play-animation" data-speed="faster" data-section="about">
-            b.s. in computer science and economics from northeastern university (honors program, dean's list);
-            located in new york city;
-            interested in data (analytics, visualizations, consulting),
-            making things, being outside, web development (mainly this one)
-        </h4>
+<!-- the contact navigation menu -->
+    <div id="subsection-contact" class="body-item navigation">
+        <h4 class="play-animation navigation-item hover-item title-contact bold" onclick="toggleNav()" data-section="contact">< CONTACT</h4>
+        <a href="mailto:leach.le@northeastern.edu"><h4 class="play-animation navigation-item hover-item" data-section="contact">EMAIL</h4></a>
+        <a href="https://linkedin.com/in/levileach" target="_blank"><h4 class="play-animation navigation-item title-linkedin hover-item" data-section="contact">LINKEDIN</h4></a>
     </div>
 
 
 <!-- the project navigation menu -->
-    <div id="project-navigation" class="navigation sub-navigation">
-        <h4 class="play-animation navigation-item hover-item title-projects bold" onclick="toggleNav()" data-section="projects">< projects</h4>
-        <a href="https://github.com/levileach" target="_blank"><h4 class="play-animation navigation-item hover-item title-github" data-section="projects">github</h4></a>
-        <h4 class="play-animation navigation-item title-spotify  hover-item hover-pointer" data-section="projects" onclick="toggleNav('project-spotify')" data-speed="fast">spotify vis</h4>
-<!--        <a href="project-spotify/index.html"><h4 class="play-animation navigation-item" data-section="projects" data-speed="fast">spotify vis</h4></a>-->
+    <div id="subsection-projects" class="body-item navigation">
+        <h4 class="play-animation navigation-item hover-item title-projects bold" onclick="toggleNav()" data-section="projects">< PROJECTS</h4>
+        <a href="https://github.com/levileach" target="_blank"><h4 class="play-animation navigation-item hover-item title-github" data-section="projects">GITHUB</h4></a>
+        <h4 class="play-animation navigation-item title-spotify  hover-item hover-pointer" data-section="projects" onclick="toggleNav('spotify')" data-speed="fast">SPOTIFY VIS</h4>
     </div>
 
+
+
 <!-- the spotify project navigation menu -->
-    <div id="project-spotify-navigation" class="navigation sub-navigation">
-        <h4 class="play-animation navigation-item title-spotify hover-item bold" onclick="toggleNav('projects')" data-section="project-spotify">< spotify vis</h4>
-        <h4 class="play-animation navigation-item long-text" data-section="project-spotify" data-speed="faster">
+    <div id="subsection-spotify" class="body-item navigation">
+        <h4 class="play-animation navigation-item title-spotify hover-item bold" onclick="toggleNav('projects')" data-section="spotify">< spotify vis</h4>
+        <h4 class="play-animation navigation-item long-text" data-section="spotify" data-speed="faster">
             (make take several seconds to load); my final personal project for information visualization (ds4200),
             exploring an open source spotify dataset through a series
             of interactive visualizations;
             utilizes the d3 javascript library;
             the dataset and visualizations were open-ended</h4>
-        <a href="project-spotify/index.html" target="_blank"><h4 class="play-animation navigation-item hover-item title-spotify long-text visit-button" data-section="project-spotify" data-speed="slow">visit</h4></a>
+        <a href="project-spotify/index.html" target="_blank"><h4 class="play-animation navigation-item hover-item title-spotify long-text visit-button" data-section="spotify" data-speed="slow">visit</h4></a>
     </div>
 
 
-<!-- the contact navigation menu -->
-    <div id="contact-navigation" class="navigation sub-navigation">
-        <h4 class="play-animation navigation-item hover-item title-contact bold" onclick="toggleNav()" data-section="contact">< contact</h4>
-        <a href="mailto:leach.le@northeastern.edu"><h4 class="play-animation navigation-item hover-item" data-section="contact">email</h4></a>
-        <a href="https://linkedin.com/in/levileach" target="_blank"><h4 class="play-animation navigation-item title-linkedin hover-item" data-section="contact">linkedin</h4></a>
-    </div>
-
-<!--    <img id="face" src="images/me.png" alt="none">-->
 
 
-
-<script src="animations.js"></script>
 </body>
 </html>
