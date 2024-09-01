@@ -15,8 +15,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: left;
-    font-family: Courier, monospace;
     font-family: "Courier Prime", monospace;
     font-weight: normal;
     background:
@@ -24,11 +22,6 @@ body {
         linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)),
         linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)),
         linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 5%);
-    background:
-        url('images/graphy-dark.png'),
-        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)),
-        linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 5%);
     background-blend-mode: overlay;
 }
 
@@ -55,7 +48,7 @@ a {
 
 
 #section-about {
-    width: max(40dvw, 400px);
+    width: 40dvw;
 }
 
 
@@ -84,7 +77,6 @@ a {
 
 .long-text {
     font-size: var(--text-size-long);
-    padding-bottom: 0;
 }
 
 #project-navigation {
@@ -117,4 +109,15 @@ a {
     .title-linkedin:hover {color: var(--color-hover);}
 }
 
+
+@media (max-width: 1000px) {
+    :root {
+        --text-size-long: 1.2rem;
+        --text-size-default: 1.5rem;
+    }
+
+    #section-about {
+        width: 80dvw;
+    }
+}
 
